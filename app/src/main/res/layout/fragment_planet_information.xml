@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_4x"
+    android:layout_marginEnd="@dimen/spacing_4x"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvPlanetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_base"
+        android:padding="@dimen/spacing_3x"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_5x"
+        android:text="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlanetPopulation"
+        />
+
+    <TextView
+        android:id="@+id/tvPlanetPopulation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_5x"
+        android:layout_margin="@dimen/spacing_base"
+        android:padding="@dimen/spacing_3x"
+        android:text="@string/planet_population"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlanetName"
+        app:layout_constraintBottom_toTopOf="@id/tvPlanetClimate"
+        />
+
+    <TextView
+        android:id="@+id/tvPlanetClimate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_5x"
+        android:layout_margin="@dimen/spacing_base"
+        android:padding="@dimen/spacing_3x"
+        android:text="@string/planet_climate"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlanetPopulation"
+        app:layout_constraintBottom_toTopOf="@id/tvPlanetDiameter"
+        />
+
+    <TextView
+        android:id="@+id/tvPlanetDiameter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_5x"
+        android:layout_margin="@dimen/spacing_base"
+        android:padding="@dimen/spacing_3x"
+        android:text="@string/planet_diameter"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlanetClimate"
+        app:layout_constraintBottom_toTopOf="@id/tvPlanetGravity"
+
+        />
+
+    <TextView
+        android:id="@+id/tvPlanetGravity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_5x"
+        android:layout_margin="@dimen/spacing_base"
+        android:padding="@dimen/spacing_3x"
+        android:text="@string/planet_gravity"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlanetDiameter"
+        app:layout_constraintBottom_toTopOf="@id/tvPlanetRotationPeriod"
+
+        />
+
+    <TextView
+        android:id="@+id/tvPlanetRotationPeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_5x"
+        android:layout_margin="@dimen/spacing_base"
+        android:padding="@dimen/spacing_3x"
+        android:text="@string/rotation_period"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlanetGravity"
+        app:layout_constraintBottom_toTopOf="@id/tvPlanetSurfaceWater"
+        />
+
+    <TextView
+        android:id="@+id/tvPlanetSurfaceWater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_5x"
+        android:layout_margin="@dimen/spacing_base"
+        android:padding="@dimen/spacing_3x"
+        android:text="@string/surface_water"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlanetRotationPeriod"
+        app:layout_constraintBottom_toTopOf="@id/tvPlanetTerrain"
+
+        />
+
+    <TextView
+        android:id="@+id/tvPlanetTerrain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_5x"
+        android:layout_margin="@dimen/spacing_base"
+        android:padding="@dimen/spacing_3x"
+        android:text="@string/planets_terrain"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlanetSurfaceWater"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

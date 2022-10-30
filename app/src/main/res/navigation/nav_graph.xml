@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.zonal.starwars.view.welcomescreen.fragment.WelcomeFragment"
+        android:label="welcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_startWarsPlanetsFragment"
+            app:destination="@id/startWarsPlanetsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/startWarsPlanetsFragment"
+        android:name="com.zonal.starwars.view.planetsdisplay.fragments.StarWarsFragment"
+        android:label="startWarsPlanetsFragment"
+        tools:layout="@layout/fragment_starwars">
+        <action
+            android:id="@+id/action_startWarsPlanetsFragment_to_startWarsPlanetsInformationFragment"
+            app:destination="@id/startWarsPlanetsInformationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/startWarsPlanetsInformationFragment"
+        android:name="com.zonal.starwars.view.planetsinformation.fragments.PlanetInformationFragment"
+        android:label="startWarsPlanetsInformationFragment"
+        tools:layout="@layout/fragment_planet_information">
+    </fragment>
+</navigation>

@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+    id 'androidx.navigation.safeargs'
+    id 'dagger.hilt.android.plugin'
+    id 'org.greenrobot.greendao'
+}
+
+apply from: '../buildsystem/dependencies.gradle'
+
+def appName = 'StarWars'
+def defaultApplicationId = "com.zonal.starwars"
+
+
+android {
+
+    compileSdkVersion rootProject.compileSdkVersion
+    defaultConfig {
+        applicationId "${defaultApplicationId}"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionMajor * 100 + rootProject.versionMinor * 10 + rootProject.versionPatch
+        versionName "${rootProject.versionMajor}.${rootProject.versionMinor}.${rootProject.versionPatch}"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_10
+        targetCompatibility JavaVersion.VERSION_1_10
+    }
+}
+    greendao{
+        schemaVersion 3
+        daoPackage 'com.zonal.starwars'
+        targetGenDir 'src/main/java'
+    }
+
+dependencies {
+    implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+    implementation "com.google.android.material:material:$materialAndroidXVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayoutVersion"
+    implementation "androidx.test:core:$coreTest"
+    implementation "androidx.viewpager:viewpager:$viewPagerVersion"
+    implementation "com.airbnb.android:lottie:$lottie"
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefreshlayout"
+
+    implementation "androidx.navigation:navigation-fragment:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui:$navigationVersion"
+
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycleVersion"
+
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    annotationProcessor "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    implementation "org.greenrobot:greendao:$greenrobotGreenDaoVersion"
+    implementation "org.greenrobot:greendao-generator:$greenrobotGenerator"
+
+}

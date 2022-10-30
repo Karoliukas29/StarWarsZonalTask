@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">StarWars</string>
+    <string name="get_planets">Get planets</string>
+    <string name="population">\"Population: \"</string>
+    <string name="sorting">Sorting</string>
+    <string name="cancel">Cancel</string>
+    <string name="sort_by_population">Sort by Population</string>
+    <string name="sort_by_name">Sort by Name</string>
+    <string name="sort">Sort</string>
+    <string name="name">Planet Name</string>
+    <string name="planet_population">Planet Population</string>
+    <string name="planet_climate">Planet Climate</string>
+    <string name="planet_diameter">Planet diameter</string>
+    <string name="planet_gravity">Planet Gravity</string>
+    <string name="rotation_period">Rotation Period</string>
+    <string name="surface_water">Surface Water</string>
+    <string name="planets_terrain">Planets Terrain</string>
+
+</resources>
